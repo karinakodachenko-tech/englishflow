@@ -82,8 +82,11 @@ export function updateLessonProgress(
   saveProgress(next);
   return next;
 }
-
-export function recordWordReviewconst next: ProgressState = {
+export function recordWordReview(  word: string,
+  translation: string,
+  rating: ReviewRating,
+  progress: ProgressState,
+  now = Date.now(),
 ): ProgressState {
   const key = wordKey(word);
   const current = progress.wordProgress[key] ?? {
