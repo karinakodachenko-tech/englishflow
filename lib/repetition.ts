@@ -121,7 +121,7 @@ export function recordWordReview(  word: string,
     nextReviewAt = now + nextIntervalDays * 24 * 60 * 60 * 1000;
   }
 
-  const next = {
+  const next: ProgressState = { {
     ...progress,
     wordProgress: {
       ...progress.wordProgress,
